@@ -39,7 +39,7 @@ socket.on("connect", function(){
   console.log("Connected to server");
   socket.on("updateState", function(state){
     console.log("The new state is: " + state);
-    //gpio.write(config.led, !state);
+    gpio.write(config.led, !state);
   });
   // send Temperature data every 5 seconds
   setInterval(function(){
